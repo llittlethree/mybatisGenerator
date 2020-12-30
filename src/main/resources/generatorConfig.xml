@@ -34,7 +34,7 @@
             <property name="forceBigDecimals" value="false"/>
         </javaTypeResolver>
         <!--targetPackage目标包，targetPackage修改成自己要放生成实体类的位置 -->
-        <javaModelGenerator targetPackage="com.zhangxiaosan.top.model" targetProject="src/main/java">
+        <javaModelGenerator targetPackage="com.StudentApartmentManager.model" targetProject="src/main/java">
             <!--enableSubPackages,是否让schema作为包的后缀-->
             <property name="enableSubPackages" value="false"/>
             <!--从数据库返回的值被清除前后空格 对String类型字段调用trim()方法-->
@@ -42,12 +42,12 @@
         </javaModelGenerator>
 
         <!--targetProject:mapper映射文件生成的位置  targetPackage修改成自己要放Mapper的路径-->
-        <sqlMapGenerator targetPackage="com.zhangxiaosan.top.mapper" targetProject="src/main/java">
+        <sqlMapGenerator targetPackage="com.StudentApartmentManager.mapper" targetProject="src/main/java">
             <property name="enableSubPackages" value="false"></property>
 
         </sqlMapGenerator>
         <!--targetPackage:mapper接口生成的位置 targetPackage修改成自己要放Mapper接口的路径 -->
-        <javaClientGenerator type="XMLMAPPER" targetPackage="com.zhangxiaosan.top.dao" targetProject="src/main/java">
+        <javaClientGenerator type="XMLMAPPER" targetPackage="com.StudentApartmentManager.dao" targetProject="src/main/java">
             <property name="enableSubPackages" value="false"/>
         </javaClientGenerator>
 
@@ -57,14 +57,14 @@
                enableDeleteByExample="true" enableSelectByExample="true"
                selectByExampleQueryId="true" >
             <!--配置加密解密字段-->
-            <columnOverride column="student_password" javaType="String" typeHandler="com.zhangxiaosan.top.utils.privacy.AesTypeHandler"></columnOverride>
+            <columnOverride column="student_password" javaType="String" typeHandler="privacy.AesTypeHandler"></columnOverride>
         </table>
         <table tableName="t_admin"  domainObjectName="Admin"
                enableCountByExample="true" enableUpdateByExample="true"
                enableDeleteByExample="true" enableSelectByExample="true"
                selectByExampleQueryId="true">
-            <columnOverride column="admin_password" javaType="String" typeHandler="com.zhangxiaosan.top.utils.privacy.AesTypeHandler"></columnOverride>
-            <columnOverride column="admin_phone" javaType="String" typeHandler="com.zhangxiaosan.top.utils.privacy.Md5TypeHandler"></columnOverride>
+            <columnOverride column="admin_password" javaType="String" typeHandler="privacy.AesTypeHandler"></columnOverride>
+            <columnOverride column="admin_phone" javaType="String" typeHandler="privacy.Md5TypeHandler"></columnOverride>
         </table>
 
         <table tableName="t_region"  domainObjectName="Region"
