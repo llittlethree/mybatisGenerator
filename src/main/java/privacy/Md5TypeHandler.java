@@ -11,7 +11,6 @@ import java.sql.ResultSet;
 import java.sql.SQLException;
 
 public class Md5TypeHandler extends BaseTypeHandler<Object> {
-
     @Override
     public void setNonNullParameter(PreparedStatement preparedStatement, int i, Object o, JdbcType jdbcType) throws SQLException {
         if (preparedStatement!=null){
@@ -23,7 +22,6 @@ public class Md5TypeHandler extends BaseTypeHandler<Object> {
                 e.printStackTrace();
             }
         }
-
     }
 
     @Override

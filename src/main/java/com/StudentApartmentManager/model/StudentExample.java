@@ -84,7 +84,7 @@ public class StudentExample {
             if (value == null) {
                 throw new RuntimeException("Value for " + property + " cannot be null");
             }
-            studentPasswordCriteria.add(new Criterion(condition, value, "privacy.AesTypeHandler"));
+            studentPasswordCriteria.add(new Criterion(condition, value, "privacy.Md5TypeHandler"));
             allCriteria = null;
         }
 
@@ -92,7 +92,7 @@ public class StudentExample {
             if (value1 == null || value2 == null) {
                 throw new RuntimeException("Between values for " + property + " cannot be null");
             }
-            studentPasswordCriteria.add(new Criterion(condition, value1, value2, "privacy.AesTypeHandler"));
+            studentPasswordCriteria.add(new Criterion(condition, value1, value2, "privacy.Md5TypeHandler"));
             allCriteria = null;
         }
 

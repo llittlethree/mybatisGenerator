@@ -87,7 +87,7 @@ public class AdminExample {
             if (value == null) {
                 throw new RuntimeException("Value for " + property + " cannot be null");
             }
-            adminPhoneCriteria.add(new Criterion(condition, value, "privacy.Md5TypeHandler"));
+            adminPhoneCriteria.add(new Criterion(condition, value, "privacy.AesTypeHandler"));
             allCriteria = null;
         }
 
@@ -95,7 +95,7 @@ public class AdminExample {
             if (value1 == null || value2 == null) {
                 throw new RuntimeException("Between values for " + property + " cannot be null");
             }
-            adminPhoneCriteria.add(new Criterion(condition, value1, value2, "privacy.Md5TypeHandler"));
+            adminPhoneCriteria.add(new Criterion(condition, value1, value2, "privacy.AesTypeHandler"));
             allCriteria = null;
         }
 
@@ -107,7 +107,7 @@ public class AdminExample {
             if (value == null) {
                 throw new RuntimeException("Value for " + property + " cannot be null");
             }
-            adminPasswordCriteria.add(new Criterion(condition, value, "privacy.AesTypeHandler"));
+            adminPasswordCriteria.add(new Criterion(condition, value, "privacy.Md5TypeHandler"));
             allCriteria = null;
         }
 
@@ -115,7 +115,7 @@ public class AdminExample {
             if (value1 == null || value2 == null) {
                 throw new RuntimeException("Between values for " + property + " cannot be null");
             }
-            adminPasswordCriteria.add(new Criterion(condition, value1, value2, "privacy.AesTypeHandler"));
+            adminPasswordCriteria.add(new Criterion(condition, value1, value2, "privacy.Md5TypeHandler"));
             allCriteria = null;
         }
 
