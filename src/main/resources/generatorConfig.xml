@@ -57,14 +57,14 @@
                enableDeleteByExample="true" enableSelectByExample="true"
                selectByExampleQueryId="true" >
             <!--配置加密解密字段-->
-            <columnOverride column="student_password" javaType="String" typeHandler="privacy.AesTypeHandler"></columnOverride>
+            <columnOverride column="student_password" javaType="String" typeHandler="privacy.Md5TypeHandler"></columnOverride>
         </table>
         <table tableName="t_admin"  domainObjectName="Admin"
                enableCountByExample="true" enableUpdateByExample="true"
                enableDeleteByExample="true" enableSelectByExample="true"
                selectByExampleQueryId="true">
-            <columnOverride column="admin_password" javaType="String" typeHandler="privacy.AesTypeHandler"></columnOverride>
-            <columnOverride column="admin_phone" javaType="String" typeHandler="privacy.Md5TypeHandler"></columnOverride>
+            <columnOverride column="admin_phone" javaType="String" typeHandler="privacy.AesTypeHandler"></columnOverride>
+            <columnOverride column="admin_password" javaType="String" typeHandler="privacy.Md5TypeHandler"></columnOverride>
         </table>
 
         <table tableName="t_region"  domainObjectName="Region"
